@@ -40,11 +40,19 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] What is the purpose of using _sessions_?
 
+HTTP by default is stateless. It doesn't store who logged in when or anything. If you logged into an app without sessions and navigated to another section of the same app, you would have to log in over and over because without sessions, the app cannot keep track of who is logged in. This would make using this app a terrible experience. Using sessions keeps track of who logged in and when.
+
 - [ ] What does bcrypt do to help us store passwords in a secure manner.
+
+bcrypt takes passwords and encodes/encrypts them using an algorithm then hashes the passwords multiple times (rounds).
 
 - [ ] What does bcrypt do to slow down attackers?
 
+bcrypt uses cryptographic hashing and time to slow down attackers also known as a Key Derivation Function(KDF). bcrypt also repeats the process many times or rounds.
+
 - [ ] What are the three parts of the JSON Web Token?
+
+The three parts of a JSON Web Token(JWT) are the Header, where the information about the algorithm used and the token type are stored, the Payload where some data is held, the convention being an ID of some sort but never any sensitive data or information and finally the Signature that encodes the header and payload together in base64 and signs it with a secret.
 
 ## Minimum Viable Product
 
